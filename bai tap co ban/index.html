@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // var x = 1;
+      // var y = 6;
+      // tong = x + y;
+      // //   alert(tong);
+      // //   console.log(tong);
+
+      // var name = "truong van quang";
+      // //   alert(name);
+      // if (tong > 2) {
+      //   // alert("lon hon 2");
+      // } else {
+      //   // alert("be hon hoac bang 2");
+      // }
+
+      // if (tong % 2 == 0) {
+      //   alert("chan");
+      // } else {
+      //   alert("le");
+      // }
+
+      //opera toan tu
+
+      // const name = "quang dep trai";
+      // document.write(name);
+      //cach 1
+      // let firstNum = 10;
+      // let secondNum = 1;
+      // document.write(firstNum + secondNum);
+      //cach 2
+      //let firstNum = 10;
+      // firstNum = firstNum + 1;
+      // document.write(firstNum);
+      // cach 3
+      // let firstNum = 10;
+      // firstNum += 1;
+      // document.write(firstNum);
+
+      // doi tuong
+
+      // let quang = {
+      //   name: "van quang",
+      //   vuiTinh: "true",
+      //   age: "22",
+      //   sing: function () {
+      //     document.write("toi la quang");
+      //   },
+      // };
+      // document.write(quang.vuiTinh);
+      // quang.sing();
+
+      // Object
+
+      // let = cauChao = "hello cac ban";
+      // // document.write(cauChao.length); // do dai
+      // document.write(cauChao.includes("hello")); //check true false
+
+      // Array
+      // const food = new Array(3);
+      // food[0] = "bun";
+      // food[1] = "my";
+      // food[2] = "pho";
+      // console.log(food);
+
+      // const food = new Array("bun", "my", "pho");
+      // console.log(food[2]);
+
+      // if else
+
+      // const num = 10;
+      // if (num == 5) {
+      //   console.log("aloooo");
+      // } else {
+      //   console.log("blog");
+      // }
+
+      // const input = 3;
+      // switch (input) {
+      //   case 1:
+      //     console.log("xin chao");
+      //     break;
+      //   case 2:
+      //     console.log("hiiiii");
+      //     break;
+      //   case 3:
+      //     console.log("hahahaa");
+      //     break;
+
+      //   default:
+      //     break;
+      // }
+
+      //loop for, for of
+      // const foodDy = ["bun", "my", "pho"];
+      // for (const food of foodDy) {
+      //   document.write(food + "<br/>");
+      // }
+
+      // for (let index = 0; index < foodDy.length; index++) {
+      //   console.log({ index });
+      //   const food = foodDy[index];
+      //   document.write(food + "<br/>");
+      // }
+
+      //ham function
+      // function num(n) {
+      //   for (let i = 1; i < n; i++) {
+      //     document.write(i);
+      //   }
+      // }
+      // num(5);
+
+      //dom manipulation, event, call back, ajax call, async, await, promise
+      //kiem tra nam chan hay le
+      // var x = 10;
+      // var y = 6;
+      // tong = x + y;
+      // if (tong % 2 == 0) {
+      //   alert("chan");
+      // } else {
+      //   alert("le");
+      // }
+
+      //nhap mau va kiem tra
+      // const food = new Array("mau xanh", "mau do", "mau vang", "cac mau khac");
+      // document.write(food[3]);
+      // console.lo(food[2])
+
+      //kiem tra so chan lon hon 100
+      // var num = 80;
+      // if (num % 2 == 0 && num > 100) {
+      //   console.log("so chan lon hon 100");
+      // } else {
+      //   console.log("so chan nho hon 100");
+      // }
+
+      //kiem tra nam nhuan
+      // let nam = parseInt(prompt("nhap nam"));
+      // if (nam % 4 == 0) {
+      //   if (nam % 100 == 0) {
+      //     if (nam % 400 == 0) {
+      //       alert(nam + " la nam nhuan");
+      //     } else {
+      //       alert(nam + " khong phai la nam nhuan");
+      //     }
+      //   } else {
+      //     alert(nam + " la nam nhuan");
+      //   }
+      // } else {
+      //   alert(nam + "khong phai la nam nhuan");
+      // }
+      const numBer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let n = 5;
+      let sum = 0;
+      for (
+        let index = 0;
+        index < numBer.length;
+        index++
+      ) // for (let index = 0; index <= n; index++)
+      {
+        const num = numBer[index];
+        document.write(num);
+        // if (num % 2 == 0) {
+        //   console.log("so chan");
+        // } else {
+        //   console.log("so le");
+        // }
+
+        //in ra cac so be hon 5
+
+        // if (num < 5) {
+        //   console.log([1, 2, 3, 4, 5]);
+        // }
+
+        //in ra so 6
+
+        // if (num === 6) {
+        //   console.log(num);
+        // }
+
+        //tinh tong 1-10
+
+        sum += num;
+        console.log(sum);
+
+        //tinh theo cong thuc
+
+        // sum = 1 + 1 / n;
+        // console.log(sum);
+      }
+
+      // function findBig(a, b, c) {
+      //   let big = a;
+
+      //   if (b > big) {
+      //     big = b;
+      //   }
+
+      //   if (c > big) {
+      //     big = c;
+      //   }
+
+      //   return big;
+      // }
+      // console.log(findBig(5, 3, 9));
+      // console.log(findBig(10, 2, 8));
+      // console.log(findBig(3, 3, 3));
+    </script>
+  </body>
+</html>

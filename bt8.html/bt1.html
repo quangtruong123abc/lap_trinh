@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tiêu đề</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- tao 1 ul va 4 li, ben trong Li co span, viet hamclick vaoLi nao, tim tới span con cua no va hide di -->
+    <script>
+      $(document).ready(function () {
+        $("li").click(function () {
+          $(this).find("span").hide();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul>
+      <li class="first">li 1 <span>Span 1</span></li>
+      <li class="second">li 2 <span>Span 2</span></li>
+      <li class="third">li 3 <span>Span 3</span></li>
+      <li class="fourth">li 4 <span>Span 4</span></li>
+    </ul>
+  </body>
+</html>

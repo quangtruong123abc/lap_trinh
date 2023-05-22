@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style>
+      .test0 {
+        color: rgb(204, 255, 0);
+      }
+      .test1 {
+        color: rgb(255, 0, 43);
+      }
+      .test2 {
+        color: rgb(0, 115, 128);
+      }
+      .test3 {
+        color: rgb(0, 204, 255);
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("p").attr("class", function (i) {
+          return "test" + i;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Thành phần p 01</p>
+    <p>Thành phần p 02</p>
+    <p>Thành phần p 03</p>
+    <p>Thành phần p 04</p>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // luc nay ham nay se nhan vao 2 tham so
+      function tinhtong2so(x, y, z) {
+        if (z == true) {
+          // goi ham trong ham
+          tinhtong(x, y);
+        } else {
+          tinhnhan(x, y);
+        }
+      }
+
+      // tach ra nhỏ
+      function tinhtong(x, y) {
+        tong = x + y;
+        alert(tong);
+      }
+
+      function tinhnhan(x, y) {
+        tong = x * y;
+        alert(tong);
+      }
+
+      // cong thuc
+      function tinhSum(x, y) {
+        s = 0;
+        for (var i = x; i < y; i++) {
+          s = s + i;
+        }
+        alert(s);
+      }
+    </script>
+
+    <!-- function(ham): thuc thi nhiem vu ma su kien muon -->
+    <!-- event(su kien): la 1 so hanh dong tac dong vao the html: click, hover, change... -->
+
+    <!-- viet 1 su kien onclick(click vao button) thi ham tinhtong2so se chay -->
+    <!-- truyen vao 2 tham so -->
+    <button onclick="tinhtong2so(1,2, true)">click tong</button>
+    <button onclick="tinhtong2so(8,8, false)">click nhan</button>
+    <button onclick="tinhSum(1,11)">tinh tong tu x-y</button>
+    <button onclick="tinhSum(10,20)">tinh tong tu x-y</button>
+
+    <!-- xem lai va lam lai cac bai tap if va for, bang cach viet ham click, va truyen tham so ben ngoai vao -->
+  </body>
+</html>

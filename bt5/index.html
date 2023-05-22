@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          // var xx = $('a').attr('class');
+
+          // var xx = $('img').attr('src');
+          // alert(xx)
+
+          // $('a').attr('href',"gia tri moi");
+
+          var y =
+            "https://cdn.24h.com.vn/upload/2-2023/images/2023-05-12/medium/u22-10-1683901032-63-width740height555.jpg";
+
+          $("img").attr("src", y);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- attr:
+    - lấy gia tri cua thuoc tinh:
+        cong thuc: $('ten the').attr('ten-thuoc-tinh');
+
+    - them/thay doi gia tri thuoctinh
+        $('ten the').attr('ten-thuoc-tinh',"gia tri moi");
+
+
+
+    thuoc tinh: href, class, id, src
+    gia tri: ben trong thuoc tinh -->
+
+    <!-- <a href="index.html" class="active" id="gia"></a> -->
+    <img
+      src="https://cdn.24h.com.vn/upload/2-2023/images/2023-05-13/120x90/1683912632-655-thumbnail-width740height555.jpg"
+    />
+
+    <button>click</button>
+  </body>
+</html>

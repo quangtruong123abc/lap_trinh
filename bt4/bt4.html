@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .demo {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button.ACTIVE").click(function () {
+          var x = $("p").hasClass("demo");
+          // alert(x);
+          if (x == true) {
+            $("p").show();
+            $("p").removeClass("demo");
+          } else {
+            $("p").hide();
+            $("p").addClass("demo");
+          }
+        });
+      });
+    </script>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+      distinctio enim illo sed dolorum minus ullam sequi! Maiores, molestias
+      consequatur. Quaerat ullam esse unde nam minima tempore ab ipsa tempora?
+    </p>
+    <button class="ACTIVE">onclick</button>
+  </body>
+</html>

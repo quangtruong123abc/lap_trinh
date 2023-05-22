@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .demo {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("li.xin").click(function () {
+          $("li.xin").addClass("demo");
+        });
+        $("li.hello").click(function () {
+          $("li.hello").addClass("demo");
+        });
+        $("li.halo").click(function () {
+          $("li.halo").addClass("demo");
+        });
+        $("li.VN").click(function () {
+          $("li.VN").addClass("demo");
+        });
+      });
+    </script>
+    <ul>
+      <li class="xin">xin chao</li>
+      <li class="hello">hello</li>
+      <li class="halo">halo</li>
+      <li class="VN">i'm from VN</li>
+    </ul>
+  </body>
+</html>

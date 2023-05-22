@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("img").click(function () {
+          var x = $(this).attr("src");
+          $(".imgb").attr("src", x);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- xong lam giup abai nay.tao html nhu tren, k can dep
+    - tren 1 hinh lớn
+    - dưới nhiu hình nhỏ viet ham click vao hình nhỏ nào thi lay src cua hinh đó ra va set lên hình lớn. -->
+    <p>
+      <img
+        class="imgb"
+        style="width: 100px; height: 100px"
+        src="https://s.net.vn/Wc4J"
+      />
+    </p>
+    <ul>
+      <li>
+        <img
+          style="width: 70px; height: 70px"
+          src="https://gro.com.vn/wp-content/uploads/gro-nua-dau-11.jpg"
+        />
+      </li>
+      <li>
+        <img
+          style="width: 70px; height: 70px"
+          src="https://gro.com.vn/wp-content/uploads/gro-nua-dau-9.jpg"
+        />
+      </li>
+      <li>
+        <img
+          style="width: 70px; height: 70px"
+          src="https://gro.com.vn/wp-content/uploads/mu-bao-hiem-nua-dau-Amby-8.jpg"
+        />
+      </li>
+    </ul>
+  </body>
+</html>

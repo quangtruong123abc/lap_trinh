@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // khai bao 1 bien trong js dung tu khoa' var
+
+      var x = 1;
+      var y = 2;
+
+      tong = x + y;
+      // alert(tong) : hien thi thong bao len man hinh
+      // console.log(tong): log ra ben duoiws de xem ket qua tinh toan
+
+      // biến thì nhiều kiêu:
+      // - kieu số (int/number): 352532
+      // - kieu chuỗi (string) va chuỗi phải đặt trong dấu "": "hoc lap trinh"
+      // - kiêu boolean: true/false
+      // - biến và số thi k đặt trong dấu "", vi đặt se trở thanh chuôi
+
+      var name = " hoc lap trinh";
+
+      // alert(name)
+
+      var xx = true;
+
+      if (tong > 2) {
+        // alert("so nay > 2")
+      } else {
+        // alert("so nay <= 2")
+      }
+
+      // 1 số biểu thức so sánh su dung trong if else
+      // ==, !=, &&, ||, *, /, >, >=, <,<=
+      // %: chia lấy phần dư
+
+      // 4 % 2 => 0
+      // 4 % 3 != 0
+
+      if (tong % 2 == 0) {
+        // alert("day la so chan")
+      } else {
+        // alert("day la so le")
+      }
+
+      // chú y: if else có thể lồng vao nhau nhieu lan
+      // cho 1 số tu nhien n, viet ham kiem tra:
+      // - neu N > 100: thi kiem tra N la so chan hay le
+      // - neu N < 100: thi kiem tra N la so chan hay le
+
+      var n = 52;
+
+      if (n > 100) {
+        if (n % 2 == 0) {
+          // alert("day la so chan > 100")
+        } else {
+          // alert("day la so le > 100")
+        }
+      } else {
+        if (n % 2 == 0) {
+          // alert("day la so chan < 100")
+        } else {
+          // alert("day la so le < 100")
+        }
+      }
+
+      // trong 1 câu lênh if có thể chưa nhiều dk (phep toan so sanh)
+      var a = 1;
+      var b = 2;
+      var c = 3;
+
+      // tim số max
+
+      // a > b && a > c => a
+      // b > a && b > c => b
+      // truong cuoi cung: c
+
+      if (a > b && a > c) {
+        // =>a
+      } else if (b > a && b > c) {
+        // => b
+      } else {
+        // cuoi cung => c
+      }
+    </script>
+  </body>
+</html>

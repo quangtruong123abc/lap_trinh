@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .demo {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button.add").click(function () {
+          $("h1").addClass("demo");
+          //   $("h1").show();
+        });
+
+        var x = $("h1").hasClass("demo");
+        alert(x);
+        if (x == true) {
+          $("h1").removeClass("demo");
+        } else {
+          $("h1").addClass("demo");
+        }
+
+        $("button#remove").click(function () {
+          //   $("h1").hide();
+          $("h1").removeClass("demo");
+        });
+      });
+    </script>
+    <h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti tempore
+      ipsam rerum quas placeat? Ipsum repellat quas facilis ex et! Deleniti
+      corporis eos quasi, vero doloremque aliquid accusantium cumque fugiat!
+    </h1>
+    <button class="add">add</button>
+    <button id="remove">remove</button>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(function () {
+        var x = $("a").attr("href");
+        $(".test").html(x);
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>Thành phần p có <a href="https://zingnews.vn/">link a</a></p>
+    <div>Bạn đang xem nội dung tại <span class="test"></span></div>
+  </body>
+</html>
