@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tiêu đề</title>
+    <style type="text/css">
+      p {
+        background-color: red;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function () {
+          var getEmail = $("input.email").val();
+          var getPass = $("input.pass").val();
+          var x = 1;
+          if (getEmail == "") {
+            $("p.err1").text("vui long nhap email");
+            x = 2;
+          } else {
+            $("p.err1").text("");
+          }
+          if (getPass == "") {
+            $("p.err2").text("vui long nhap password");
+            x = 2;
+          } else {
+            $("p.err2").text("");
+          }
+
+          if (x == 1) {
+            return true;
+          }
+          return false;
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>xu ly form</h1>
+    <form action="https://www.24h.com.vn/">
+      <input type="text" name="" value="" class="email" />
+      <p class="err1"></p>
+      <input type="text" name="" value="" class="pass" />
+      <p class="err2"></p>
+      <button type="submit">send</button>
+    </form>
+  </body>
+</html>

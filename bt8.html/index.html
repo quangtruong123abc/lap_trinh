@@ -8,6 +8,13 @@
       $(function () {
         $("li").find(".test").css("background-color", "blue");
       });
+      var xx = localStorage.getItem("demo");
+      console.log(xx);
+
+      if (xx) {
+        xx = JSON.parse(xx);
+        console.log(xx);
+      }
     </script>
   </head>
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      p {
+        background-color: red;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function (e) {
+          var getS = $("select").val();
+          var getC = $("input#checkbox").is(":checked");
+
+          if (getS == "" || getC == false) {
+            return false;
+          } else {
+            var link = $("form").attr("action");
+            window.open(link);
+            return false;
+          }
+        });
+
+        $("input#checkbox").click(function () {
+          if ($(this).is(":checked")) {
+            $("button[type='submit']").removeAttr("disabled");
+          } else {
+            $("button[type='submit']").attr("disabled", "disabled");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="https://www.24h.com.vn/?">
+      <input value="" type="checkbox" id="checkbox" name="" />
+      <select>
+        <option value="">vui long chon</option>
+        <option value="1">female</option>
+        <option value="2">male</option>
+      </select>
+      <button type="submit" disabled>send</button>
+    </form>
+  </body>
+</html>

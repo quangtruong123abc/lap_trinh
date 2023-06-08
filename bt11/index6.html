@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //  - tao index6.html
+      //  + lay array bên bài index5 ra(chu y kiem tra co k)
+      //  + dung vòng lặp map hiển thị duy nhất 1 số 9 ra
+      //  + từ vào array này, dùng MAP(hoac for) lấy các value <= 5 ra và đưa vào arr mới , và consolo array cuối cùng để xem kêt quả.
+      //  + tương tự vào array này, dùng filter(lọc) lấy các value <= 5 ra và đưa vào arr mới , và consolo array cuối cùng để xem kêt quả.
+      //  + và đưa arr mới vao local
+      var x = localStorage.getItem("hi");
+      console.log(x);
+
+      if (x) {
+        x = JSON.parse(x);
+        console.log(x);
+      }
+      x.map(function (value, key) {
+        if (key == 8) {
+          //   console.log(value);
+        }
+      });
+      var xx = [];
+      x.map(function (value, key) {
+        if (key <= 4) {
+          xx.push(value);
+        }
+      });
+      //   console.log(xx);
+
+      var ft = [];
+      x.filter(function (value, key) {
+        if (key <= 4) {
+          ft.push(value);
+        }
+      });
+      //   console.log(ft);
+
+      var a = JSON.stringify(xx);
+      localStorage.setItem("xin chao", a);
+
+      var ft = JSON.stringify(ft);
+      localStorage.setItem("filter", ft);
+    </script>
+  </body>
+</html>

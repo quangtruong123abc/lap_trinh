@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Biến toàn cục
+      var email = "";
+
+      $(".form1").submit(function (e) {
+        // Biến cục bộ
+        var y = 2;
+        email = y; // Gán giá trị biến cục bộ y cho biến toàn cục email
+        return false;
+      });
+
+      $(".form2").submit(function (e) {
+        alert(email);
+        return false;
+      });
+    });
+  </script>
+  <body>
+    <form action="" class="form1">
+      <button type="submit">send</button>
+    </form>
+    <form action="" class="form2">
+      <button type="submit">send</button>
+    </form>
+  </body>
+</html>

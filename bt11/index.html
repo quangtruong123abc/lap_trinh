@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var mang1 = [];
+      mang1.push("apple", "orion", "violet");
+      //   console.log(mang1); log các phần tử ra
+      //   console.log(mang1.length); độ dài
+      //   console.log(mang1[2]); log từng phần tử
+      for (let i = 0; i < mang1.length; i++) {
+        // console.log(mang1[i]);log tất cả
+        if (i == 2) {
+          //   console.log(mang1[i]);log phần tử
+        }
+      }
+
+      mang1.map(function (value, key) {
+        // console.log(value);log tất cả value
+        // console.log(key); log tất cả key
+        if (key == 1) {
+          //   console.log(value);log value của key
+        }
+      });
+
+      var mang2 = [];
+      mang2.push(1, 2, 3, 4, 5, 6);
+      var sum = 0;
+      for (let i = 0; i < mang2.length; i++) {
+        sum = sum + mang2[i];
+      }
+      //   console.log(sum); ting tong bang ham for
+
+      s = 0;
+      mang2.map(function (value, key) {
+        s = s + value;
+      });
+      console.log(s); //tinh tong bang ham map
+
+      var xx = JSON.stringify(mang2);
+      localStorage.setItem("demo", xx);
+    </script>
+  </body>
+</html>
