@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //   Tạo 1 trang index.html:
+      //  +  tạo obj bằng rỗng.
+      //  + Sau đó thêm 4 key va value vào obj để tạo 1 obj đa cấp
+      //   + Đưa obj đa cấp đó vào localstorage
+      var demo1 = {};
+      demo1["vidu1"] = "apple";
+      demo1.vidu2 = "orange";
+      //   console, console.log(demo1);
+
+      var demo2 = {
+        favorite: "write code",
+        name: "quang",
+        class: "abc",
+        city: "quang tri",
+      };
+      demo1["demo2"] = demo2;
+      console.log(demo1);
+
+      var a = JSON.stringify(demo1);
+      localStorage.setItem("object1", a);
+    </script>
+  </body>
+</html>

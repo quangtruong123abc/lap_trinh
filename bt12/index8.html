@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style type="text/css">
+      p {
+        background-color: red;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+      //         Tao 1 form có 2 input: username và email
+
+      // - click submit form thi lấy 2 value trên dua vao objCon,
+      // (nhớ kiêm tra xem user va email da nhap chua, chưa thi báo lỗi, ok hết thi đưa vào objCon)
+      //     {
+      //         'xx': 'baovic'
+      //         'yy': 'ac@gmail.com'
+      //     }
+      // sau do dua objCon vao objCha nhu sau
+      // {
+      //     'baovic': {
+      //         'xx': 'baovic'
+      //         'yy': 'ac@gmail.com'
+      //     },
+      // }
+      // nhap tiep lan 2 thi them vao objcha nhu sau:
+      // {
+      //     'baovic': {
+      //         'xx': 'baovic'
+      //         'yy': 'ac@gmail.com'
+      //     },
+      //     ‘namihuong’: {
+      //         'xx': 'namihuong'
+      //         'yy': 'ac@gmail.com'
+      //     }
+      // }
+
+      // tuong tu lan 3:
+      // {
+      //     'baovic': {
+      //         'xx': 'baovic'
+      //         'yy': 'ac@gmail.com'
+      //     },
+      //     ‘namihuong’: {
+      //         'xx': 'namihuong'
+      //         'yy': 'ac@gmail.com'
+      //     },
+      //     nam: {
+      //         'xx': 'nam'
+      //         'yy': 'ac@gmail.com'
+      //     }
+      // }
+
+      // GOI Y:
+
+      // Lấy "xx" va "yy" làm key của objCon như sau:
+      //  {
+      //     'xx': 'baovic'
+      //     'yy': 'ac@gmail.com'
+      //  }
+      // và lây chinh objcon này đưa vào objCha va dùng value cua username làm key khi dua
+
+      // vao objCha = {
+      //     'baovic': {
+      //         'xx': 'baovic'
+      //         'yy': 'ac@gmail.com'
+      //     }
+      // }
+
+      // sau đó dua vao localstroage để giữ lại.
+
+      $(document).ready(function () {
+        $("form").submit(function () {
+          var objCha = localStorage.getItem("nameEmail");
+          if (objCha) {
+            objCha = JSON.parse(objCha);
+          } else {
+            objCha = {};
+          }
+          var getName = $("input#name").val();
+          var getEmail = $("input#email").val();
+          var x = 1;
+
+          if (getName == "") {
+            $("p.err1").text("vui long nhap name");
+            x = 2;
+          } else {
+            $("p.err1").text("");
+          }
+          if (getEmail == "") {
+            $("p.err2").text("vui long nhap email");
+            x = 2;
+          } else {
+            $("p.err2").text("");
+          }
+
+          if (x == 1) {
+            var objCon = {
+              xx: getName,
+              yy: getEmail,
+            };
+            objCha[objCon.xx] = objCon;
+
+            console.log(objCha);
+
+            var g = JSON.stringify(objCha);
+            localStorage.setItem("nameEmail", g);
+            $("input#name").val("");
+            $("input#email").val("");
+
+            return true;
+          }
+          return false;
+        });
+      });
+    </script>
+    <form style="margin: 100px 0 0 100px" action="#">
+      <span>name</span>
+      <input id="name" type="text" placeholder="username" value="" />
+      <p class="err1"></p>
+      <span>email</span>
+      <input id="email" type="text" placeholder="email" value="" />
+      <p class="err2"></p>
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Siblings Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="hiii">Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+      <li>Grapes</li>
+    </ul>
+
+    <script>
+      $(document).ready(function () {
+        // Add a click event handler to the sibling elements with class "hiii"
+        $("li").click(function () {
+          $(this).siblings(".hiii").addClass("highlight");
+        });
+      });
+    </script>
+  </body>
+</html>

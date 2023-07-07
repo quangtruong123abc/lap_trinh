@@ -19,7 +19,7 @@
           //   console.log(mang1[i]);log phần tử
         }
       }
-
+      //cu phap ten-mang[key]
       mang1.map(function (value, key) {
         // console.log(value);log tất cả value
         // console.log(key); log tất cả key
@@ -40,10 +40,37 @@
       mang2.map(function (value, key) {
         s = s + value;
       });
-      console.log(s); //tinh tong bang ham map
+      // console.log(s); //tinh tong bang ham map
 
       var xx = JSON.stringify(mang2);
       localStorage.setItem("demo", xx);
+
+      var demo1 = {};
+      demo1["vidu1"] = "sam sung";
+      demo1.vidu2 = "iphone";
+      // console.log(demo1); in all value
+      // console.log(Object.keys(demo1).length); do dai
+      //if(Object.keys(demo1).length > 0){....};
+      //ten-object[key]  cu phap
+      // console.log(demo1["vidu1"]); lay value ra
+
+      demo1["arr"] = mang1;
+      // console.log(demo1);  lay all value
+      // console.log(demo1["arr"][1]);    chi lay value trong arr cua mang1
+      var demo2 = {
+        city: "quang tri",
+        name: "quang truong",
+      };
+      demo1["obj"] = demo2;
+      // console.log(demo1); lay all value
+      // console.log(demo1["obj"]["name"]); lay phan tu trong obj
+
+      Object.keys(demo1).map(function (key, index) {
+        // console.log(key); tr ve cac cha
+        // console.log(index); tung tu nhu key ben arr
+        // console.log(demo1[key]);
+        //s = s + demo1[keys]
+      });
     </script>
   </body>
 </html>

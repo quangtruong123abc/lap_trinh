@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //     -Tạo index4.html :
+      //  + lây obj : tuong tu cac phan trc do
+      //  + hiển thị ra xem đã xoá thằng obj ở bài 3 chưa?
+
+      var demo7 = localStorage.getItem("Object3");
+      console.log(demo7);
+
+      if (demo7) {
+        demo7 = JSON.parse(demo7);
+        console.log(demo7);
+      }
+
+      Object.keys(demo7).map(function (key, index) {
+        // console.log(demo7[key]);
+        // console.log(key);
+        // console.log(index);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //    Tao index3.html:
+      //   + lây obj trong localstora ra (chu y kiem tra)
+      //   + console xem có obj đã thêm trong bài 2 chưa?
+      //   + Dùng map để duyêt và hiển thị các value và key dưới dạng console
+      //   + Sau đó tim cách xoá 1 obj, ( xoá obj bằng key).
+      //   + Rôi dua obj vao tiếp localstora
+
+      //   goi localStorage bai 2
+      var demo5 = localStorage.getItem("object2");
+      console.log(demo5);
+
+      if (demo5) {
+        demo5 = JSON.parse(demo5);
+        // console.log(demo5);
+      }
+
+      Object.keys(demo5).map(function (key, index) {
+        // console.log(demo5[key]);
+        // console.log(key);
+        // console.log(index);
+      });
+      var removeObject = {
+        animal: "dog",
+        flower: "sunFlower",
+        book: "learn",
+      };
+
+      delete removeObject["animal"];
+      console.log(removeObject);
+
+      demo5["demo6"] = removeObject;
+      console.log(demo5);
+
+      var c = JSON.stringify(demo5);
+      localStorage.setItem("Object3", c);
+    </script>
+  </body>
+</html>

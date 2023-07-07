@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // tao index5.html
+      //  + tao 1 obj rỗng
+      //  + thêm 1-10 vào obj (dung for tạo, lấy i làm key va value), console ra xem thử đã thêm vào dc chưa?
+      //  + dua obj vào local
+      var in5 = {};
+
+      for (let i = 1; i <= 10; i++) {
+        in5[i] = i;
+      }
+
+      var d = JSON.stringify(in5);
+      localStorage.setItem("number", d);
+
+      console.log(in5);
+    </script>
+  </body>
+</html>

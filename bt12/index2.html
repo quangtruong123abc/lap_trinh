@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //    Tạo tiếp 1 trang index2.html :
+      //   + gọi obj trong localstora ở bài 1 ra( nhớ phải kiêm tra )
+      //   + Dùng map để duyêt và hiển thị các value và key dưới dạng console
+      //   + sau đo add thêm 1 ọbj mới vào obj cũ trc đó và đưa vao localstora.
+
+      //   goi localStorage bai 1
+      var demo3 = localStorage.getItem("object1");
+      console.log(demo3);
+
+      if (demo3) {
+        demo3 = JSON.parse(demo3);
+        // console.log(demo3);
+      }
+
+      //dung map
+      Object.keys(demo3).map(function (key, index) {
+        // console.log(demo3[key]);
+        // console.log(key);
+        // console.log(index);
+      });
+      //   them object moi
+      var demo4 = {
+        food: "meat",
+        drink: "bear",
+      };
+
+      demo3["demo4"] = demo4;
+      console.log(demo3);
+
+      //dua vao local
+      var b = JSON.stringify(demo3);
+      localStorage.setItem("object2", b);
+    </script>
+  </body>
+</html>

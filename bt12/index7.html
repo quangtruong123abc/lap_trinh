@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //    tao index7.html
+      //  + lay obj bên bài index5 ra(chu y kiem tra co k)
+      //  + tao 1 obj mới có value 11-20
+      //  + merge obj cũ  va obj mới vao lại làm 1 .
+      //  + sau đo tinh tổng các value có trong obj mới này.
+
+      var in7 = localStorage.getItem("up5");
+      console.log(in7);
+
+      if (in7) {
+        in7 = JSON.parse(in7);
+        console.log(in7);
+      }
+      var number = {};
+      for (let i = 11; i <= 20; i++) {
+        number[i] = i;
+      }
+      console.log(number);
+
+      var merge = {
+        ...in7,
+        ...number,
+      };
+      console.log(merge);
+      var s = 0;
+      Object.keys(merge).map(function (key, value) {
+        s = s + merge[key];
+      });
+      console.log(s);
+    </script>
+  </body>
+</html>
